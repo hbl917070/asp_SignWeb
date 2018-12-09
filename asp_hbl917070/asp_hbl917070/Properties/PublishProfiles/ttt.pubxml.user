@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案是由您 Web 專案的發行/封裝處理程序所使用。您可以編輯此 MSBuild 檔案，
+以自訂此處理程序的行為。若要深入了解，請造訪 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\WEN\Desktop\asp、發佈</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/asp-時間圖片.dll">
+      <publishTime>12/10/2018 03:55:27</publishTime>
+    </File>
+    <File Include="bin/asp-時間圖片.pdb">
+      <publishTime>12/10/2018 03:55:27</publishTime>
+    </File>
+    <File Include="bin/HtmlRenderer.dll">
+      <publishTime>06/05/2017 02:18:07</publishTime>
+    </File>
+    <File Include="bin/HtmlRenderer.pdb">
+      <publishTime>06/05/2017 02:18:07</publishTime>
+    </File>
+    <File Include="bin/HtmlRenderer.WPF.dll">
+      <publishTime>06/05/2017 02:18:07</publishTime>
+    </File>
+    <File Include="bin/HtmlRenderer.WPF.pdb">
+      <publishTime>06/05/2017 02:18:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/14/2016 21:29:14</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.pdb">
+      <publishTime>03/14/2016 21:29:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Web.Helpers.resources.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Web.Mvc.resources.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Web.Razor.resources.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Web.Webpages.Deployment.resources.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Web.Webpages.Razor.resources.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Web.Webpages.resources.dll">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="Controllers/ImgController.cs">
+      <publishTime>02/01/2018 04:42:44</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="Image/joseph.jpg">
+      <publishTime>04/15/2018 04:09:13</publishTime>
+    </File>
+    <File Include="Image/kira.jpg">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="Image/SignWeb/助手.png">
+      <publishTime>12/09/2018 01:36:53</publishTime>
+    </File>
+    <File Include="Image/SignWeb/博士.png">
+      <publishTime>12/09/2018 01:36:53</publishTime>
+    </File>
+    <File Include="Image/SignWeb/土龍.png">
+      <publishTime>12/09/2018 01:36:53</publishTime>
+    </File>
+    <File Include="Image/SignWeb/沙漠貓.png">
+      <publishTime>12/09/2018 01:36:53</publishTime>
+    </File>
+    <File Include="Image/SignWeb/浣熊.png">
+      <publishTime>12/09/2018 01:36:53</publishTime>
+    </File>
+    <File Include="Image/SignWeb/海豚.png">
+      <publishTime>12/10/2018 03:53:50</publishTime>
+    </File>
+    <File Include="Image/SignWeb/皇帝企鵝.png">
+      <publishTime>12/10/2018 03:53:49</publishTime>
+    </File>
+    <File Include="Image/SignWeb/耳廓狐.png">
+      <publishTime>12/10/2018 03:53:49</publishTime>
+    </File>
+    <File Include="Image/SignWeb/藪貓.png">
+      <publishTime>12/09/2018 01:36:53</publishTime>
+    </File>
+    <File Include="Image/SignWeb/銀狐.png">
+      <publishTime>12/10/2018 03:53:50</publishTime>
+    </File>
+    <File Include="Image/SignWeb/長頸鹿.png">
+      <publishTime>12/09/2018 01:36:53</publishTime>
+    </File>
+    <File Include="Image/SignWeb/食蟻獸.png">
+      <publishTime>12/09/2018 01:36:53</publishTime>
+    </File>
+    <File Include="Image/wry.jpg">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>03/30/2018 03:23:49</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/15/2018 04:26:36</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
