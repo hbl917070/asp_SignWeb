@@ -140,17 +140,20 @@
     <Content Include="Image\SignWeb\沙漠貓.png" />
     <Content Include="Image\SignWeb\浣熊.png" />
     <Content Include="Image\SignWeb\海豚.png" />
+    <Content Include="Image\SignWeb\灰狼.png" />
     <Content Include="Image\SignWeb\皇帝企鵝.png" />
     <Content Include="Image\SignWeb\耳廓狐.png" />
     <Content Include="Image\SignWeb\藪貓.png" />
     <Content Include="Image\SignWeb\銀狐.png" />
     <Content Include="Image\SignWeb\長頸鹿.png" />
     <Content Include="Image\SignWeb\食蟻獸.png" />
+    <Content Include="Image\SignWeb\駝鹿.png" />
     <Content Include="Image\wry.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImgController.cs" />
     <Compile Include="Controllers\SignWebController.cs" />
     <Compile Include="Global.asax.cs">
@@ -165,6 +168,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\ttt.pubxml" />
+    <Content Include="Views\Home\ViewPage1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

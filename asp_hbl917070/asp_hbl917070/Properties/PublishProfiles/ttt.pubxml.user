@@ -21,6 +21,12 @@
     <File Include="bin/asp-時間圖片.pdb">
       <publishTime>12/10/2018 03:55:27</publishTime>
     </File>
+    <File Include="bin/asp_hbl917070.dll">
+      <publishTime>12/11/2018 02:09:57</publishTime>
+    </File>
+    <File Include="bin/asp_hbl917070.pdb">
+      <publishTime>12/11/2018 02:09:57</publishTime>
+    </File>
     <File Include="bin/HtmlRenderer.dll">
       <publishTime>06/05/2017 02:18:07</publishTime>
     </File>
@@ -142,7 +148,7 @@
       <publishTime>02/01/2018 04:42:44</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>03/30/2018 03:23:49</publishTime>
+      <publishTime>12/10/2018 04:22:16</publishTime>
     </File>
     <File Include="Image/joseph.jpg">
       <publishTime>04/15/2018 04:09:13</publishTime>
@@ -168,6 +174,9 @@
     <File Include="Image/SignWeb/海豚.png">
       <publishTime>12/10/2018 03:53:50</publishTime>
     </File>
+    <File Include="Image/SignWeb/灰狼.png">
+      <publishTime>12/11/2018 02:09:42</publishTime>
+    </File>
     <File Include="Image/SignWeb/皇帝企鵝.png">
       <publishTime>12/10/2018 03:53:49</publishTime>
     </File>
@@ -186,17 +195,23 @@
     <File Include="Image/SignWeb/食蟻獸.png">
       <publishTime>12/09/2018 01:36:53</publishTime>
     </File>
+    <File Include="Image/SignWeb/駝鹿.png">
+      <publishTime>12/11/2018 02:09:42</publishTime>
+    </File>
     <File Include="Image/wry.jpg">
       <publishTime>03/30/2018 03:23:49</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>03/30/2018 03:23:49</publishTime>
     </File>
+    <File Include="Views/Home/ViewPage1.cshtml">
+      <publishTime>12/10/2018 07:17:16</publishTime>
+    </File>
     <File Include="Views/web.config">
-      <publishTime>03/30/2018 03:23:49</publishTime>
+      <publishTime>12/10/2018 04:24:15</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/15/2018 04:26:36</publishTime>
+      <publishTime>12/10/2018 07:11:47</publishTime>
     </File>
   </ItemGroup>
 </Project>

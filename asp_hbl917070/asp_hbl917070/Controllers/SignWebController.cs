@@ -11,10 +11,8 @@ using System.Web.Mvc;
 
 namespace asp_hbl917070.Controllers {
     public class SignWebController : Controller {
-        // GET: SignWeb
-        public ActionResult Index() {
-            return View();
-        }
+
+
 
 
 
@@ -41,8 +39,8 @@ namespace asp_hbl917070.Controllers {
         /// <summary>
         /// 入口，測試回傳一張圖片
         /// </summary>
+        [NonAction]
         public ActionResult t1() {
-
             string filepath = Server.MapPath("~/Image/wry.jpg");//要下載的檔案位置       
             string filename = System.IO.Path.GetFileName(filepath);  //取得檔案名稱       
             Stream iStream = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.Read); //讀成串流     
@@ -50,22 +48,12 @@ namespace asp_hbl917070.Controllers {
         }
 
 
-
-
-        public String t3() {
-
-            DateTime time_start = DateTime.Now;//計時開始 取得目前時間
-
-            String ss = func_get_base64("藪貓");
-            //
-            //
-            //
-            DateTime time_end = DateTime.Now;//計時結束 取得目前時間            
-            string result2 = ((TimeSpan)(time_end - time_start)).TotalMilliseconds.ToString();//後面的時間減前面的時間後 轉型成TimeSpan即可印出時間差
-            System.Console.WriteLine("+++++++++++++++++++++++++++++++++++" + result2 + " 毫秒");
-
-
-            return result2;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Index() {
+            return SignWeb();
         }
 
 
@@ -76,9 +64,6 @@ namespace asp_hbl917070.Controllers {
         /// <returns></returns>
         public ActionResult SignWeb() {
 
-
-
-
             String s_顏色 = func_隨機顏色();
             String t1 = "";
             String t2 = "";
@@ -88,37 +73,25 @@ namespace asp_hbl917070.Controllers {
 
 
 
-
-
             String sum = $@"<?xml version='1.0' encoding='utf-8'?>
-<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version='1.2' baseProfile='tiny' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px'
-	 y='0px' viewBox='0 0 660 125' overflow='scroll' xml:space='preserve'>
-
-<g id='圖層_2'>
-	<rect fill='rgba(0,0,0,0.8)' width='660' height='125'>
-        <!-- <animate attributeName='fill' values='rgba(167,128,99,0.8);rgba(167,128,99,0.5);rgba(167,128,99,0.8);' dur='30s' repeatCount='indefinite' /> -->
-    </rect>
-</g>
-
-
-<g id='圖層_1'>
-    {s_img}
-	<text transform='matrix(1 0 0 1 535 114)' font-family='Microsoft JhengHei' font-size='12px'>hbl917070(深海異音)</text>
-	<text transform='matrix(1 0 0 1 148 37.8271)' fill='{s_顏色}' font-family='Microsoft JhengHei' font-size='25px'>{t1}</text>
-	<text transform='matrix(1 0 0 1 148 69.9877)' fill='{s_顏色}' font-family='Microsoft JhengHei' font-size='25px'>{t2}</text>
-	<text transform='matrix(1 0 0 1 148 103.7304)' fill='{s_顏色}' font-family='Microsoft JhengHei' font-size='25px'>{t3}</text>
-</g>
-
-<g id='圖層_3'>
-	<rect fill='{s_顏色}' width='660' height='5'></rect>
-	<rect x='-60' y='60' transform='matrix(6.123234e-17 -1 1 6.123234e-17 -60.1152 65.1152)' fill='{s_顏色}' width='125' height='5'></rect>
-	<rect y='120' fill='{s_顏色}' width='660' height='5'></rect>
-	<rect x='595' y='60' transform='matrix(6.123234e-17 -1 1 6.123234e-17 594.8848 720.1152)' fill='{s_顏色}' width='125' height='5'></rect>	
-</g>
-
+<svg version='1.2' baseProfile='tiny' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 660 125' overflow='scroll' xml:space='preserve'>
+    <g id='圖層_2'>
+	    <rect fill='rgba(0,0,0,0.8)' width='660' height='125'></rect>
+    </g>
+    <g id='圖層_1'>
+        {s_img}
+	    <text transform='matrix(1 0 0 1 535 114)' font-family='Microsoft JhengHei' font-size='12px'>hbl917070(深海異音)</text>
+	    <text transform='matrix(1 0 0 1 148 37.8271)' fill='{s_顏色}' font-family='Microsoft JhengHei' font-size='25px'>{t1}</text>
+	    <text transform='matrix(1 0 0 1 148 69.9877)' fill='{s_顏色}' font-family='Microsoft JhengHei' font-size='25px'>{t2}</text>
+	    <text transform='matrix(1 0 0 1 148 103.7304)' fill='{s_顏色}' font-family='Microsoft JhengHei' font-size='25px'>{t3}</text>
+    </g>
+    <g id='圖層_3'>
+	    <rect fill='{s_顏色}' width='660' height='5'></rect>
+	    <rect x='-60' y='60' transform='matrix(6.123234e-17 -1 1 6.123234e-17 -60.1152 65.1152)' fill='{s_顏色}' width='125' height='5'></rect>
+	    <rect y='120' fill='{s_顏色}' width='660' height='5'></rect>
+	    <rect x='595' y='60' transform='matrix(6.123234e-17 -1 1 6.123234e-17 594.8848 720.1152)' fill='{s_顏色}' width='125' height='5'></rect>	
+    </g>
 </svg>";
-
 
 
             byte[] b = Encoding.UTF8.GetBytes(sum);
@@ -194,17 +167,17 @@ namespace asp_hbl917070.Controllers {
             try {
                 String s_win = Uri.UnescapeDataString(Request.Headers.ToString());
                 if (s_win.Contains("Windows+NT+6.4") || s_win.Contains("Windows+NT+10")) {
-                    return "Win10 ";
+                    return "Win10";
                 } else if (s_win.Contains("Windows+NT+6.3")) {
-                    return "Win8.1 ";
+                    return "Win8.1";
                 } else if (s_win.Contains("Windows+NT+6.2")) {
-                    return "Win8 ";
+                    return "Win8";
                 } else if (s_win.Contains("Windows+NT+6.1")) {
-                    return "Win7 ";
+                    return "Win7";
                 } else if (s_win.Contains("Windows+NT+6.0")) {
-                    return "Win Vista ";
+                    return "Win Vista";
                 } else if (s_win.Contains("Windows+NT+5.1")) {
-                    return "Win XP ";
+                    return "Win XP";
                 }
             } catch { }
 
@@ -213,7 +186,10 @@ namespace asp_hbl917070.Controllers {
             try {
                 String h = Uri.UnescapeDataString(Request.Headers.ToString()).ToLower();
 
-                if (h.Contains("android")) {
+
+                if (h.Contains("mac+os")|| h.Contains("mac os")) {
+                    return "macOS";
+                }else if (h.Contains("android")) {
                     return "Android";
                 } else if (h.Contains("+centos")) {
                     return "Centos";
@@ -246,25 +222,25 @@ namespace asp_hbl917070.Controllers {
             //嘗試直接取得作業系統，誤判率極高
             try {
                 String s_作業系統名稱 = Request.Browser.Platform.ToString().ToLower();
-
+                                 
                 if (s_作業系統名稱.Contains("mac")) {
                     return "Mac";
-                } else if (s_作業系統名稱.ToUpper().Contains("linux")) {
+                } else if (s_作業系統名稱.Contains("linux")) {
                     return "Linux";
-                } else if (s_作業系統名稱.ToUpper().Contains("android")) {
+                } else if (s_作業系統名稱.Contains("android")) {
                     return "Android";
-                } else if (s_作業系統名稱.ToUpper().Contains("iphone")) {
+                } else if (s_作業系統名稱.Contains("iphone")) {
                     return "iPhone";
-                } else if (s_作業系統名稱.ToUpper().Contains("unknown")) {
+                } else if (s_作業系統名稱.Contains("unknown")) {
                     return "";
-                } else if (s_作業系統名稱.ToUpper().Contains("win")) {
+                } else if (s_作業系統名稱.Contains("win")) {
                     return "Windows";
                 }
 
                 //避免linux被誤判城unix
                 try {
                     String h = Uri.UnescapeDataString(Request.Headers.ToString()).ToLower();
-                    if (s_作業系統名稱.ToLower() == "unix" && h.Contains("linux")) {
+                    if (s_作業系統名稱 == "unix" && h.Contains("linux")) {
                         return "Linux";
                     }
                 } catch { }
@@ -349,7 +325,7 @@ namespace asp_hbl917070.Controllers {
 
                 if (b == "InternetExplorer") {
                     return "IE";
-                } else if (b.Contains("Unknown")) {//
+                } else if (b.ToLower().Contains("unknown")) {//
                     return "";
                 }
 
@@ -513,7 +489,7 @@ namespace asp_hbl917070.Controllers {
                 t3 = $"",
                 img = "<image width='145' height='125' xlink:href='" + func_get_base64("銀狐") + "'></image>"
             });
-           
+
             //皇帝企鵝
             ar.Add(new svg_data {
                 t1 = $"",
@@ -522,15 +498,47 @@ namespace asp_hbl917070.Controllers {
                 img = "<image width='125' height='125' xlink:href='" + func_get_base64("皇帝企鵝") + "'></image>"
             });
 
+            //灰狼
+            ar.Add(new svg_data {
+                t1 = $"你就是那個從 {func_取得地區(ip)} 來的朋友吧",
+                t2 = $"聽長頸鹿說你是山羊？",
+                t3 = $"",
+                img = "<image width='125' height='125' xlink:href='" + func_get_base64("灰狼") + "'></image>"
+            });
+
+
+            DateTime dt = DateTime.Now;
+            String s_時間 = "";
+            if (dt.Hour < 1) {
+                s_時間 = "三更半夜";
+            } else if (dt.Hour < 6) {
+                s_時間 = "凌晨" + dt.Hour + "點";
+            } else if (dt.Hour < 12) {
+                s_時間 = "早上" + dt.Hour + "點";
+            } else if (dt.Hour < 13) {
+                s_時間 = "中午";
+            } else if (dt.Hour < 18) {
+                s_時間 = "下午" + (dt.Hour - 12) + "點";
+            } else {
+                s_時間 = "晚上" + (dt.Hour - 12) + "點";
+            }
+
+            //駝鹿
+            ar.Add(new svg_data {
+                t1 = $"看看現在都已經{s_時間}了",
+                t2 = $"決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥　決鬥<animate dur='5s' attributeName='x' from='-500' to='-125' repeatCount='indefinite' rotate='auto'/>",
+                t3 = $"決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥決鬥<animate dur='4s' attributeName='x' from='-600' to='-200' repeatCount='indefinite' rotate='auto'/>",
+                img = "<image width='186' height='125' xlink:href='" + func_get_base64("駝鹿") + "'></image>"
+            });
+
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
             int x = rnd.Next(1, ar.Count);
-            //	<image width='143' height='125' xlink:href=''></image>
+
 
             t1 = ar[x].t1;
             t2 = ar[x].t2;
             t3 = ar[x].t3;
             img = ar[x].img;
-
 
         }
 
@@ -575,13 +583,13 @@ namespace asp_hbl917070.Controllers {
 
 
 
-        class C_地區暫存 {
+        private class C_地區暫存 {
             public DateTime d_時間;
             public String s_區域;
         }
 
 
-        Dictionary<String, C_地區暫存> ar_地區暫存 = new Dictionary<String, C_地區暫存>();
+        private static Dictionary<String, C_地區暫存> ar_地區暫存 = new Dictionary<String, C_地區暫存>();
 
 
         /// <summary>
@@ -591,10 +599,13 @@ namespace asp_hbl917070.Controllers {
         /// <returns></returns>
         private String func_取得地區(String ip) {
 
+            //API說明
+            //https://www.ipip.net/support/api.html
+
             if (ip == "1.1.1.1") {
                 return "台灣";
             }
-      
+
 
             //如果1天內有暫存，就直接用暫存的資料
             if (ar_地區暫存.ContainsKey(ip)) {
@@ -604,7 +615,6 @@ namespace asp_hbl917070.Controllers {
             }
 
             String url = "http://freeapi.ipip.net/" + ip;
-
             String html = "";
 
             //從網路抓資料
@@ -625,7 +635,6 @@ namespace asp_hbl917070.Controllers {
 
 
             try {
-
                 JArray json = JArray.Parse(html);
                 String s = "";
                 if (json.Count >= 2) {
@@ -651,10 +660,7 @@ namespace asp_hbl917070.Controllers {
 
 
 
-
             return "台灣";
-
-
 
         }
 
