@@ -8,6 +8,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
+using System.Windows.Media.Imaging;
+using TheArtOfDev.HtmlRenderer.WPF;
+
 
 namespace asp_hbl917070.Controllers {
     public class SignWebController : Controller {
@@ -187,9 +190,9 @@ namespace asp_hbl917070.Controllers {
                 String h = Uri.UnescapeDataString(Request.Headers.ToString()).ToLower();
 
 
-                if (h.Contains("mac+os")|| h.Contains("mac os")) {
+                if (h.Contains("mac+os") || h.Contains("mac os")) {
                     return "macOS";
-                }else if (h.Contains("android")) {
+                } else if (h.Contains("android")) {
                     return "Android";
                 } else if (h.Contains("+centos")) {
                     return "Centos";
@@ -222,7 +225,7 @@ namespace asp_hbl917070.Controllers {
             //嘗試直接取得作業系統，誤判率極高
             try {
                 String s_作業系統名稱 = Request.Browser.Platform.ToString().ToLower();
-                                 
+
                 if (s_作業系統名稱.Contains("mac")) {
                     return "Mac";
                 } else if (s_作業系統名稱.Contains("linux")) {
@@ -389,7 +392,7 @@ namespace asp_hbl917070.Controllers {
             try {
                 String s_ip = func_取得IP();
                 if (s_ip.Length >= 8)
-                    ip = func_取得IP();
+                    ip = s_ip;
             } catch { }
 
 
@@ -693,7 +696,7 @@ namespace asp_hbl917070.Controllers {
                       .Replace("伦", "倫").Replace("罗", "羅").Replace("达", "達")
                       .Replace("刚", "剛").Replace("萨", "薩").Replace("纳", "納")
                       .Replace("腊", "臘").Replace("韩", "韓").Replace("劳", "勞")
-                      .Replace("宾", "賓").Replace("叙", "敘").Replace("乌", "烏")
+                      .Replace("动", "動").Replace("叙", "敘").Replace("乌", "烏")
                       .Replace("莱", "萊").Replace("缅", "緬").Replace("麦", "麥")
                       .Replace("济", "濟").Replace("买", "買").Replace("卢", "盧")
                       .Replace("宾", "賓").Replace("绍", "紹").Replace("颠", "顛")
@@ -738,6 +741,67 @@ namespace asp_hbl917070.Controllers {
                       .Replace("么", "麼").Replace("从", "從").Replace("声", "聲")
                       .Replace("听", "聽").Replace("变", "變").Replace("铁", "鐵");
         }
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ip(String s) {
+
+            String html = @"<html>
+  <head>
+    <meta charset='UTF-8' />
+    <style>
+      html, body { margin:0px; padding:0px; }
+      #ddd {background-color:rgb(0,0,0); font-family:'Microsoft JhengHei';  padding:20px; margin:10px;   }
+      .p { color: #ffffff; font-size:24px; }
+    </style>
+  </head>
+  <body>
+    <div id='ddd'>
+      <div class='p'>ＩＰ：{ip}</div>
+      <div class='p'>裝置：{pc_or_phone}</div>
+      <div class='p'>瀏覽器：{borwser}</div>
+      <div class='p'>作業系統：{system}</div>
+    </div>
+  </body>
+</html>";
+
+            String s_作業系統 = func_取得作業系統();
+            String s_手機或電腦 = (func_是否用手機瀏覽()) ? "手機" : "電腦";
+            String s_瀏覽器 = func_取得瀏覽器類型();
+            String ip = "1.1.1.1";
+            try {
+                String s_ip = func_取得IP();
+                if (s_ip.Length >= 8)
+                    ip = s_ip;
+            } catch { }
+            html = html.Replace("{ip}", ip);
+            html = html.Replace("{pc_or_phone}", s_手機或電腦);
+            html = html.Replace("{borwser}", s_瀏覽器);
+            html = html.Replace("{system}", s_作業系統);
+
+            BitmapFrame image = HtmlRender.RenderToImage(html)  ;
+            byte[] imgBytes;
+            var png = new JpegBitmapEncoder();
+            png.Frames.Add(image);
+            using (MemoryStream mem = new MemoryStream()) {
+                png.Save(mem);
+                imgBytes = mem.ToArray();  // and use the imgBytes array in your SQL operation
+            }
+            return File(imgBytes, "image/jpeg");
+        }
+
+
 
     }
 }

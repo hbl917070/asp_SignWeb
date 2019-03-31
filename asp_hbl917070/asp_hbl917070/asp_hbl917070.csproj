@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\..\程式專案\C#\WPF_學校公告\WPF_學校公告\bin\Debug\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlRenderer">
       <HintPath>D:\程式專案\C#\HTML-Renderer-master\Source\Demo\WPF\bin\Debug\HtmlRenderer.dll</HintPath>
     </Reference>
@@ -98,6 +101,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -132,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Image\hbl917070.png" />
     <Content Include="Image\joseph.jpg" />
     <Content Include="Image\kira.jpg" />
     <Content Include="Image\SignWeb\助手.png" />
@@ -155,6 +160,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImgController.cs" />
+    <Compile Include="Controllers\ImgReplyController.cs" />
     <Compile Include="Controllers\SignWebController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -179,6 +185,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\ImgReply\" />
     <Folder Include="Views\Img\" />
     <Folder Include="Views\SignWeb\" />
   </ItemGroup>

@@ -22,10 +22,16 @@
       <publishTime>12/10/2018 03:55:27</publishTime>
     </File>
     <File Include="bin/asp_hbl917070.dll">
-      <publishTime>12/11/2018 02:09:57</publishTime>
+      <publishTime>04/01/2019 02:28:08</publishTime>
     </File>
     <File Include="bin/asp_hbl917070.pdb">
-      <publishTime>12/11/2018 02:09:57</publishTime>
+      <publishTime>04/01/2019 02:28:08</publishTime>
+    </File>
+    <File Include="bin/HtmlAgilityPack.dll">
+      <publishTime>08/07/2017 10:54:52</publishTime>
+    </File>
+    <File Include="bin/HtmlAgilityPack.pdb">
+      <publishTime>08/07/2017 10:54:52</publishTime>
     </File>
     <File Include="bin/HtmlRenderer.dll">
       <publishTime>06/05/2017 02:18:07</publishTime>
@@ -150,6 +156,9 @@
     <File Include="Global.asax">
       <publishTime>12/10/2018 04:22:16</publishTime>
     </File>
+    <File Include="Image/hbl917070.png">
+      <publishTime>04/01/2019 01:55:52</publishTime>
+    </File>
     <File Include="Image/joseph.jpg">
       <publishTime>04/15/2018 04:09:13</publishTime>
     </File>
@@ -205,7 +214,7 @@
       <publishTime>03/30/2018 03:23:49</publishTime>
     </File>
     <File Include="Views/Home/ViewPage1.cshtml">
-      <publishTime>12/10/2018 07:17:16</publishTime>
+      <publishTime>04/01/2019 02:16:38</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>12/10/2018 04:24:15</publishTime>

@@ -59,3 +59,6 @@ D:\GitHub\asp_SignWeb\asp_hbl917070\asp_hbl917070\obj\Debug\asp_hbl917070.csproj
 D:\GitHub\asp_SignWeb\asp_hbl917070\asp_hbl917070\obj\Debug\asp_hbl917070.csproj.CopyComplete
 D:\GitHub\asp_SignWeb\asp_hbl917070\asp_hbl917070\obj\Debug\asp_hbl917070.dll
 D:\GitHub\asp_SignWeb\asp_hbl917070\asp_hbl917070\obj\Debug\asp_hbl917070.pdb
+D:\GitHub\asp_SignWeb\asp_hbl917070\asp_hbl917070\bin\HtmlAgilityPack.dll
+D:\GitHub\asp_SignWeb\asp_hbl917070\asp_hbl917070\bin\HtmlAgilityPack.pdb
+D:\GitHub\asp_SignWeb\asp_hbl917070\asp_hbl917070\bin\HtmlAgilityPack.xml
